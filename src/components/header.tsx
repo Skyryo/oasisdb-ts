@@ -48,9 +48,9 @@ export default function ResponsiveAppBar() {
           <Box sx={{ flexGrow: 1, display:'flex' ,color: 'black'}}>
               {pages.map((page) => (
                 <MenuItem key={page.toPage} >
-                  <a href={page.toPage} >
-                    {page.prefix}
-                  </a> 
+                  <Link href={page.toPage} legacyBehavior >
+                    <a>{page.prefix}</a>
+                  </Link> 
                 </MenuItem>
               ))}
           </Box>
